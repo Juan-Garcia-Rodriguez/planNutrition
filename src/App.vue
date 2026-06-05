@@ -4,11 +4,13 @@ import Icon from './components/Icon.vue'
 import ProfileView from './views/ProfileView.vue'
 import NutritionView from './views/NutritionView.vue'
 import WorkoutView from './views/WorkoutView.vue'
+import YogaView from './views/YogaView.vue'
 import ProgressView from './views/ProgressView.vue'
 
 const tabs = [
   { id: 'nutrition', label: 'Nutrition', icon: 'bowl', comp: NutritionView },
   { id: 'sport', label: 'Sport', icon: 'dumbbell', comp: WorkoutView },
+  { id: 'yoga', label: 'Yoga', icon: 'yoga', comp: YogaView },
   { id: 'progres', label: 'Progrès', icon: 'chart', comp: ProgressView },
   { id: 'profil', label: 'Profil', icon: 'user', comp: ProfileView }
 ]
@@ -18,6 +20,7 @@ const current = computed(() => tabs.find(t => t.id === active.value).comp)
 const heroText = {
   nutrition: { e: 'Plan nutritionnel', t: 'Manger <em>vivant</em>, mincir en douceur', p: 'Des repas 100% végétaux pensés pour la perte de poids, avec recettes et macros détaillées.' },
   sport: { e: 'Programme adapté', t: 'Bouger <em>sans</em> se blesser', p: 'Des séances conçues autour de tes contraintes : dos, jambe et cheville protégés.' },
+  yoga: { e: 'Yoga & bien-être', t: 'Respirer, <em>s\'étirer</em>, se recentrer', p: 'Séances adaptées à tes contraintes : mobilité, force douce, pranayama et récupération profonde.' },
   progres: { e: 'Suivi', t: 'Avancer, <em>un jour</em> à la fois', p: 'Garde un œil sur ton poids, ton hydratation et tes séances accomplies.' },
   profil: { e: 'Configuration', t: 'Ton plan, <em>à ta mesure</em>', p: 'Ajuste tes données : tout le reste de l\'application s\'adapte instantanément.' }
 }
